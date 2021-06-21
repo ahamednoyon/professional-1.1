@@ -106,8 +106,26 @@ header{
     text-transform: uppercase;
     color: #fff;
     font-size: 15px;
+    position: relative
 
 }
+
+.half-width ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: cornsilk;
+    width: 0;
+    height: 2px;
+    transition: .5s;
+    opacity: 0;
+}
+.half-width ul li a:hover::after{
+    width: 100%;
+    opacity: 1;
+}
+
 /* =======================================
 home css
 ==========================================*/
@@ -172,4 +190,100 @@ home css
 .half-about p{
     line-height: 25px;
     margin-bottom: 20px;
+}
+
+
+/*==============================================
+ service css
+===============================================*/
+
+
+
+#service{
+    background: url(../images/latest-work-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-title{
+    margin-bottom: 80px;
+}
+.section-title h2{
+    text-align: center;
+    font-size: 30px;
+}
+
+.inner-service{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.service-item{
+    width: 30%;
+}
+.service-item img{
+    border-radius: 5px;
+}
+
+/*==============================================
+ testmonial css
+===============================================*/
+
+
+#testimonial{
+    background: url(../images/footer-bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.top-tst{
+    text-align: center;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.top-tst h4{
+    margin-bottom: 30px;
+    margin-top: 5px;
+    color: gray;
+}
+
+.top-tst p{
+    width: 420px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 25px;
+    font-size: 18px;
+}
+
+.tst-bottom{
+    width: 550px;
+    margin: 30px auto;
+    text-align: center;
+    background:linear-gradient(45deg,#EC4E8A, #ED4B6F);
+    padding: 40px 50px;
+    border-radius: 10px;
+}
+.tst-bottom p{
+    color: #fff;
+}
+.tst-bottom h2{
+    margin: 20px 0px;
+    color: #fff;
+}
+
+/*==============================================
+ testmonial css
+===============================================*/
+
+footer{
+    padding: 20px 0px;
+
+}
+
+.inner-footer p{
+    text-align: center;
 }
